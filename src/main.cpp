@@ -276,8 +276,7 @@ static void chatSend(const String &msg) {
   chatDraw();
   playSfx(r.mood == "yay" ? SFX_MEOW : SFX_CHIRP);
   // reflection runs after you can already read the reply
-  clearRect(200, 2, 70, 16);
-  text(266, 2, "reflecting", F_SMALL, C_DIM, TR_DATUM);
+  statusBar("CHAT//REFLECTING");
   audioQuiet();
   int added = brainReflect();
   statusBar(cfg.apiKey.length() ? "CHAT//DEEPSEEK" : "CHAT//OFFLINE");

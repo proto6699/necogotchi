@@ -42,4 +42,4 @@ constexpr uint16_t rgb(uint8_t r, uint8_t g, uint8_t b) {
 
 #define SCREEN_W 320
 #define SCREEN_H 240
-#define FW_VERSION "0.6.0"
+#define FW_VERSION "0.6.1"

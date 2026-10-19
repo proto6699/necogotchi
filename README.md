@@ -6,9 +6,19 @@ necogotchi puts [Neco](https://github.com/proto6699/neco-ai) on a ~$15 ESP32 "Ch
 
 It's an experiment, not a product: a continuity system squeezed onto a microcontroller with no PSRAM, to see what a persistent character feels like when she lives in a physical object instead of a browser tab.
 
-<!-- PHOTOS: drop your pictures into docs/photos/ with these names, or edit the paths -->
-| | |
-|---|---|
+<p align="center">
+  <img src="docs/photos/home.jpg" width="49%" alt="necogotchi home screen: Neco, her line, the dock">
+  <img src="docs/photos/chat.jpg" width="49%" alt="a real reply from DeepSeek on the chat screen">
+</p>
+<p align="center">
+  <img src="docs/photos/boot.jpg" width="32%" alt="boot screen: ECH0 BIOS">
+  <img src="docs/photos/settings.jpg" width="32%" alt="settings screen">
+  <img src="docs/photos/back.jpg" width="32%" alt="the back: ESP32, speaker on the SPEAK connector, acrylic case">
+</p>
+
+*Photos of the real device. The chat screen shows an actual reply: she noticed she had just powered on, had no messages yet, and that music was already playing. The blue tint is the phone camera on an LCD.*
+
+---|---|
 | ![necogotchi on the desk](docs/photos/front.jpg) | ![in the hand](docs/photos/hand.jpg) |
 | ![the back: board, speaker, case](docs/photos/back.jpg) | ![in the laptop bag](docs/photos/bag.jpg) |
 
@@ -18,7 +28,7 @@ It's an experiment, not a product: a continuity system squeezed onto a microcont
 
 | | |
 |---|---|
-| Runs on hardware | yes: one dual-USB ESP32-2432S028 in an acrylic case with a small speaker. Display colours, touch and the setup portal confirmed on it; v0.6.0 reported working overall |
+| Runs on hardware | yes: one dual-USB ESP32-2432S028 in an acrylic case with a small speaker. display, touch, setup portal, SD music and DeepSeek chat seen working on it (photos above) |
 | Builds | zero warnings in project code, Arduino core 2.0.17, 1.50 MB of the 3 MB app partition |
 | Not tested | the micro-USB-only CYD and other variants; long-term reflection quality; battery use |
 
@@ -46,7 +56,7 @@ You also need Wi-Fi (a phone hotspot is fine) and a **DeepSeek API key** (platfo
 
 ## Install (browser, nothing to download but the .bin)
 
-1. Download [`firmware/necogotchi-v0.6.0.bin`](firmware/necogotchi-v0.6.0.bin).
+1. Download [`firmware/necogotchi-v0.6.1.bin`](firmware/necogotchi-v0.6.1.bin).
 2. Open **https://web.esphome.io** in Chrome, Edge, Brave or Chromium (Firefox can't talk to USB).
 3. Plug in the CYD with a **USB-A** cable (the CYD's USB-C port doesn't work with C-to-C cables).
 4. **Connect** → pick the port (CH340 / USB Serial) → **Install** → choose the `.bin`.
@@ -64,7 +74,7 @@ ls /dev/ttyUSB*                     # the board should show up
 
 Terminal alternative:
 ```bash
-esptool --chip esp32 --port /dev/ttyUSB0 write_flash 0x0 necogotchi-v0.6.0.bin
+esptool --chip esp32 --port /dev/ttyUSB0 write_flash 0x0 necogotchi-v0.6.1.bin
 ```
 
 ### First boot
