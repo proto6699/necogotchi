@@ -16,7 +16,7 @@ It's an experiment, not a product: a continuity system squeezed onto a microcont
   <img src="docs/photos/back.jpg" width="32%" alt="the back: ESP32, speaker on the SPEAK connector, acrylic case">
 </p>
 
-*Photos of the real device. The chat screen shows an actual reply: she noticed she had just powered on, had no messages yet, and that music was already playing. The blue tint is the phone camera on an LCD.*
+*Photos of the real device. The chat screen shows an actual reply: she noticed she had just powered on, had no messages yet, and that music was already playing.*
 
 ---|---|
 | ![necogotchi on the desk](docs/photos/front.jpg) | ![in the hand](docs/photos/hand.jpg) |
